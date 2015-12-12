@@ -5,7 +5,7 @@ public class Food : MonoBehaviour {
 
     public string nameFood;
     public int valueStrength;
-    public int valueResistence;
+    public int valueResistance;
     public int valueDefense;
     public bool isTake=false;
 
@@ -23,26 +23,32 @@ public class Food : MonoBehaviour {
         }
 	}
 
-    void OnTriggerEnter2D(Collider2D coll)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (coll.gameObject.tag=="canTake")
+        if (other.gameObject)
+        {
+            Debug.Log("Activado");
+        }
+       
+        if (other.gameObject.tag=="canTake")
         {
             this.isTake = true;
-        }else if (coll.gameObject.tag=="cantTake")
+            Debug.Log("Activado");
+        }else if (other.gameObject.tag=="cantTake")
         {
             this.isTake = false;
+            Debug.Log("Desactivado");
         }
     }
     public void setSumStats()
     {
-        /*
        
         GameManager.instance.BonusStrength+=this.valueStrength;
 
         GameManager.instance.BonusDefense+= this.valueDefense;
 
-        GameManager.instance.BonusResistence+=this.valueResistence;
-        */
+        GameManager.instance.BonusResistance+=this.valueResistance;
+        
     }
 }
 

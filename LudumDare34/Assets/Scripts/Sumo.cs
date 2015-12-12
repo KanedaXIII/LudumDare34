@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class Sumo : MonoBehaviour {
 
     public float strength;
-    public float resistence;
+    public float resistance;
     public float defense;
 
     Scene sceneLoaded;
