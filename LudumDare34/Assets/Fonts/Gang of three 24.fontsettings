@@ -5,11 +5,11 @@ Font:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: go3v2_copy
+  m_Name: Gang of three 24
   serializedVersion: 4
   m_AsciiStartOffset: 0
   m_Tracking: 1
-  m_LineSpacing: 27.597656
+  m_LineSpacing: 28
   m_CharacterSpacing: 1
   m_CharacterPadding: 0
   m_ConvertCase: -1
