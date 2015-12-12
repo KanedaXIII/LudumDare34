@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SumoFighterController : MonoBehaviour {
+public class SumoFighterController : MonoBehaviour
+{
+	public float bellyScale = 1.0f;
+	public Transform bellyTransform;
+	public Transform chestTransform;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public void Update()
+	{
+		this.bellyTransform.localScale = new Vector3(this.bellyScale, this.bellyScale);
+		this.chestTransform.localScale = Vector3.one / this.bellyScale;
 	}
 }

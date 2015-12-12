@@ -406,6 +406,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef7bb9dcc1e86ad448a9d5d30d58f05f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bellyScale: 0.8
+  bellyTransform: {fileID: 406168}
+  chestTransform: {fileID: 454614}
 --- !u!212 &21202280
 SpriteRenderer:
   m_ObjectHideFlags: 1
