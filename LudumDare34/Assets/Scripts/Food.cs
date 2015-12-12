@@ -24,12 +24,7 @@ public class Food : MonoBehaviour {
 	}
 
     void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject)
-        {
-            Debug.Log("Activado");
-        }
-       
+    {  
         if (other.gameObject.tag=="canTake")
         {
             this.isTake = true;
