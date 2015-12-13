@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     private int bonusResistance = 0;
     private int bonusDefense = 0;
 
+    //Atributos de escala del personaje
+    public float bellyScale = 0.8f;
+
     // Atributos para almacenar las estadísticas de la partida
     private int wins = 0;
     private int attacks = 0;
@@ -70,6 +73,7 @@ public class GameManager : MonoBehaviour
             GameManager.instance.BigAttacks = 0;
             GameManager.instance.Blocks = 0;
             GameManager.instance.Counters = 0;
+            GameManager.instance.bellyScale = 0.8f; 
         }
 
         // Cambiar de escena
@@ -179,5 +183,6 @@ public class GameManager : MonoBehaviour
             counters = value;
         }
     }
+
 
 }

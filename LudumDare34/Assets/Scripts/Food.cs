@@ -18,7 +18,7 @@ public class Food : MonoBehaviour {
 	void Update () {
         if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S)) && isTake)
         {
-            //setSumStats();
+            setSumStats();
             Destroy(this.gameObject);
         }
 	}
@@ -53,6 +53,8 @@ public class Food : MonoBehaviour {
         GameManager.instance.BonusDefense+= this.valueDefense;
 
         GameManager.instance.BonusResistance+=this.valueResistance;
+
+        GameManager.instance.bellyScale += 0.02f;
         
     }
 }
