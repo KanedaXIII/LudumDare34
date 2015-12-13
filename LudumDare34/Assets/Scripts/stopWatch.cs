@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class stopWatch : MonoBehaviour {
 
@@ -14,7 +15,7 @@ public class stopWatch : MonoBehaviour {
 
     public AudioSource lastSeconds;
 
-    private Boolean lastSecondsPlayed = false;
+    private bool lastSecondsPlayed = false;
 
     // Use this for initialization
     void Start()
@@ -67,8 +68,10 @@ public class stopWatch : MonoBehaviour {
 
     private void blockGame()
     {
+        /*
         GameManager.Instance.Block = true;
         GameManager.Instance.SetGuiItemsEnabled("EndGame", true);
         GameManager.Instance.UpdateTotalScore();
+        */
     }
 }
