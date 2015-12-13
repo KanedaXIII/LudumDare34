@@ -1359,9 +1359,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb0ae7c482bfc043acfc3480abe0dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuMusic: {fileID: 8300000, guid: 34af9a0160e890e4f9d2762a4657b020, type: 3}
+  menuMusic: {fileID: 8300000, guid: c0709ea9eb0cfa44b8979e0ed671bb26, type: 3}
   restaurantMusic: {fileID: 8300000, guid: 0fe06ed4bb0532649825dd4cae98e434, type: 3}
-  tatamiMusic: {fileID: 8300000, guid: c0709ea9eb0cfa44b8979e0ed671bb26, type: 3}
+  tatamiMusic: {fileID: 8300000, guid: 34af9a0160e890e4f9d2762a4657b020, type: 3}
 --- !u!4 &1522334306
 Transform:
   m_ObjectHideFlags: 0
