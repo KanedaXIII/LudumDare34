@@ -25,18 +25,23 @@ public class Sumo : MonoBehaviour {
     // Use this for initialization
     void Start () {
         // Animación de inicio
-        estado = 0;
+        estado = 0;        
 
+        // Añadimos los bonus de la comida
         if (this.name.Contains("Jugador"))
         {
             strength += GameManager.instance.BonusStrength;
             resistance += GameManager.instance.BonusResistance;
             defense += GameManager.instance.BonusDefense;
         }
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+        // Iniciamos los tiempos
+        defTime = defense / 2;
+        atqTime = 0;
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         // Si está en reposo y el tiempo de defensa no está al máximo se recupera
         if (estado == 1 && defTime < defense / 2)
