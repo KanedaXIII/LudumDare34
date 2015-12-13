@@ -85,6 +85,7 @@ public class Sumo : MonoBehaviour {
         if(Input.GetKeyUp(KeyCode.D) && atqTime > 0)
         {
             // Si se pulsó durante más de 0.5 seg
+            /*
             if (atqTime > 0.5)
                 // TODO Lanza ataque fuerte
                 null;
@@ -92,6 +93,7 @@ public class Sumo : MonoBehaviour {
                 // TODO Lanza ataque normal
                 null;
             atqTime = 0;
+            */
         }
 
         // Si está aturdido, deja de atacar:
