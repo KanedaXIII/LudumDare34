@@ -22,7 +22,7 @@ public class Sumo : MonoBehaviour {
     //    3 - Ataque
     //    4 - Ataque Fuerte
     //    5 - Defensa
-    private int estado;
+    private int state;
 
     // Tiempos de defensa y ataque
     private float defTime;
@@ -31,49 +31,82 @@ public class Sumo : MonoBehaviour {
     // Use this for initialization
     void Start () {
         // Animación de inicio
-        estado = 1;        
+        State = 1;        
 
         // Añadimos los bonus de la comida
-        if (this.name.Contains("Jugador"))
+        if (this.name.Contains("sosio"))
         {
-            strength += GameManager.instance.BonusStrength;
-            resistance += GameManager.instance.BonusResistance;
-            defense += GameManager.instance.BonusDefense;
+            Strength += GameManager.instance.BonusStrength;
+            Resistance += GameManager.instance.BonusResistance;
+            Defense += GameManager.instance.BonusDefense;
         }
 
-        strText.text = strength.ToString();
-        resText.text = resistance.ToString();
-        defText.text = defense.ToString();
+        strText.text = Strength.ToString();
+        resText.text = Resistance.ToString();
+        defText.text = Defense.ToString();
 
         // Iniciamos los tiempos
-        defTime = defense / 2;
+        defTime = Defense / 2;
         atqTime = 0;
     }
 
     // Update is called once per frame
     void Update () {
 
-        // Si está en reposo y el tiempo de defensa no está al máximo se recupera
-        if (estado == 1 && defTime < defense / 2)
+        // Controles del jugador
+        if (this.name.Contains("Player"))
         {
-            defTime += Time.deltaTime / 2;
+            // Si se pulsa "A" y está en estado de reposo o aturdido se defiende
+            if (Input.GetKeyDown(KeyCode.A) && (State == 1 || State == 2))
+            {
+                atqTime = 0;
+                State = 5;
+            }
+
+            // Si se deja de pulsar "A" vuelve a reposo
+            if (Input.GetKeyUp(KeyCode.A) && State == 5)
+            {
+                State = 1;
+            }
+
+            // Si pulsa "D" y está en reposo ataca 
+            if (Input.GetKeyDown(KeyCode.D) && State == 1)
+            {
+                State = 3;
+            }
+
+            // Si deja de pulsar el botón "D" vuelve a reposo
+            if (Input.GetKeyUp(KeyCode.D) && State == 3)
+            {
+                State = 1;
+                atqTime = 0;
+            }
+        }
+        else //Controles de la máquina
+        {
+            // Si está en reposo y el tiempo de defensa está al máximo se defiende
+            if (State == 1 && defTime == Defense / 2)
+            {
+                State = 5;
+            }
+
+            // Si está en reposo y el tiempo de defensa está al mínimo ataca
+            if (State == 1 && defTime == 0)
+            {
+                State = 3;
+            }
         }
 
-        // Si se pulsa "A" y está en estado de reposo o aturdido se defiende
-        if (Input.GetKeyDown(KeyCode.A) && (estado == 1 || estado == 2) && defTime >= 0.5f)
+        // Si no está defendiendo y el tiempo de defensa no está al máximo se recupera
+        if (State != 5 && defTime < Defense / 2)
         {
-            atqTime = 0;
-            estado = 5;
-        }
-
-        // Si se deja de pulsar "A" vuelve a reposo
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            estado = 1;
+            defTime += Time.deltaTime / 3;
+            if (defTime > Defense / 2)
+                defTime = Defense / 2;
         }
 
         // Si está defendiendo baja el tiempo
-        if (estado == 5)
+        if (State == 5)
         {
             defTime -= Time.deltaTime;
 
@@ -81,40 +114,86 @@ public class Sumo : MonoBehaviour {
             if(defTime <= 0)
             {
                 defTime = 0;
-                estado = 1;
+                State = 1;
             }
         }
 
-        // Si está en reposo y pulsa "D" aumenta el tiepo de ataque
-        if (estado == 1 && Input.GetKey(KeyCode.D))
+        // Si está atacando sube el tiempo y si alcanza el máximo lanza el ataque y pasa a reposo
+        if (State == 3)
         {
             atqTime += Time.deltaTime;
-            if(atqTime > 0.5f)
-                atqTime = 0.5f;
-        }
-
-        // Si deja de pulsar el botón "D" se lanza el ataque dependiendo del tiempo pulsado
-        if(Input.GetKeyUp(KeyCode.D) && atqTime > 0)
-        {
-            // Si se pulsó durante más de 0.5 seg
-
-            if (atqTime == 0.5f)
-                // TODO Lanza ataque fuerte
+            if (atqTime > 0.5f)
+            {
+                State = 1; 
                 atqTime = 0;
-            else
-                // TODO Lanza ataque normal
-                atqTime = 0;
-            
+                // Lanza el ataque dependiendo si es el jugador o la máquina
+                if (this.name.Contains("Player"))
+                    FightManager.instance.playerAttack();
+                else
+                    FightManager.instance.enemyAttack();
+            }
         }
 
         // Si está aturdido, deja de atacar:
-        if (estado == 2)
+        if (State == 2)
         {
             atqTime = 0;
         }
 
+        // Actualizamos los valores de las barras
         atqBar.value = atqTime / 0.5f;
-        defBar.value = defTime / (defense / 3);
-  
+        defBar.value = defTime / (Defense / 2);
 	}
+
+    public int Strength
+    {
+        get
+        {
+            return strength;
+        }
+
+        set
+        {
+            strength = value;
+        }
+    }
+
+    public int Resistance
+    {
+        get
+        {
+            return resistance;
+        }
+
+        set
+        {
+            resistance = value;
+        }
+    }
+
+    public int Defense
+    {
+        get
+        {
+            return defense;
+        }
+
+        set
+        {
+            defense = value;
+        }
+    }
+
+    public int State
+    {
+        get
+        {
+            return state;
+        }
+
+        set
+        {
+            state = value;
+        }
+    }
 }
