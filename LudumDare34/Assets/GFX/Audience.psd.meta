@@ -1,0 +1,237 @@
+fileFormatVersion: 2
+guid: 3e37bae49aaa75940b8b6d3632138721
+timeCreated: 1450047347
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Audience male head 1
+    21300002: Audience male head 2
+    21300004: Audience male head 3
+    21300006: Audience male head 4
+    21300008: Audience seat
+    21300010: Audience female head 1
+    21300012: Audience female head 2
+    21300014: Audience female head 3
+    21300016: Audience female head 4
+    21300018: Audience male torso
+    21300020: Audience female torso
+    21300022: Audience pants
+    21300024: Audience arm
+    21300026: Audience hand
+    21300028: Audience shoes
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 128
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Audience male head 1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 47
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Audience male head 2
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 47
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Audience male head 3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 47
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Audience male head 4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 47
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Audience seat
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 42
+        width: 24
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Audience female head 1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 30
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Audience female head 2
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 30
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Audience female head 3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 30
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Audience female head 4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 30
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Audience male torso
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 14
+        width: 11
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Audience female torso
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 14
+        width: 11
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Audience pants
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 21
+        width: 17
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Audience arm
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 20
+        width: 5
+        height: 8
+      alignment: 9
+      pivot: {x: 0.8, y: 0.8}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Audience hand
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 24
+        width: 4
+        height: 4
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Audience shoes
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 17
+        width: 17
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
