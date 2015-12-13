@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25663cc7e981b6a45bfba9f7fa5157bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameFood: 
+  nameFood: sushi
   valueStrength: 0
   valueResistance: 0
   valueDefense: 0
@@ -114,7 +114,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: nameFood
+      value: sushi
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 161716}

@@ -16,10 +16,10 @@ public class Food : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S))
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S)) && isTake)
         {
-            setSumStats();
-            Destroy(this);
+            //setSumStats();
+            Destroy(this.gameObject);
         }
 	}
 
@@ -35,6 +35,16 @@ public class Food : MonoBehaviour {
             Debug.Log("Desactivado");
         }
     }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag=="foodDest")
+        {
+            Destroy(this.gameObject);
+        }
+       
+    }
+
     public void setSumStats()
     {
        

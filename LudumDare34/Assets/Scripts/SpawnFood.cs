@@ -14,9 +14,8 @@ public class SpawnFood : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        NewFood();
         this.timeR -= Time.deltaTime;
-        if (timeR==0)
+        if (timeR<0)
         {
             NewFood();
             timeR = timeT;

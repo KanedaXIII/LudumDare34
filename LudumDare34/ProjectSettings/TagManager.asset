@@ -6,6 +6,7 @@ TagManager:
   tags:
   - cantTake
   - canTake
+  - foodDest
   layers:
   - Default
   - TransparentFX
