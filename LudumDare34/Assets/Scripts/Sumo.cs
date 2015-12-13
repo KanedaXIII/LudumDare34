@@ -1,13 +1,19 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Sumo : MonoBehaviour {
 
+    // Enlaces con la UI
+    public Text strText;
+    public Text resText;
+    public Text defText;
+    public Slider atqBar;
+    public Slider defBar;
+
     // Atributos del personaje
-    public int strength;
-    public int resistance;
-    public int defense;
+    private int strength = 3;
+    private int resistance = 3;
+    private int defense = 3;
 
     // Estado del personaje:
     //    0 - Inicio
@@ -25,7 +31,7 @@ public class Sumo : MonoBehaviour {
     // Use this for initialization
     void Start () {
         // Animación de inicio
-        estado = 0;        
+        estado = 1;        
 
         // Añadimos los bonus de la comida
         if (this.name.Contains("Jugador"))
@@ -34,6 +40,10 @@ public class Sumo : MonoBehaviour {
             resistance += GameManager.instance.BonusResistance;
             defense += GameManager.instance.BonusDefense;
         }
+
+        strText.text = strength.ToString();
+        resText.text = resistance.ToString();
+        defText.text = defense.ToString();
 
         // Iniciamos los tiempos
         defTime = defense / 2;
@@ -50,7 +60,7 @@ public class Sumo : MonoBehaviour {
         }
 
         // Si se pulsa "A" y está en estado de reposo o aturdido se defiende
-        if (Input.GetKeyDown(KeyCode.A) && (estado == 1 || estado == 2) && defTime >= 0.5)
+        if (Input.GetKeyDown(KeyCode.A) && (estado == 1 || estado == 2) && defTime >= 0.5f)
         {
             atqTime = 0;
             estado = 5;
@@ -79,21 +89,22 @@ public class Sumo : MonoBehaviour {
         if (estado == 1 && Input.GetKey(KeyCode.D))
         {
             atqTime += Time.deltaTime;
+            if(atqTime > 0.5f)
+                atqTime = 0.5f;
         }
 
         // Si deja de pulsar el botón "D" se lanza el ataque dependiendo del tiempo pulsado
         if(Input.GetKeyUp(KeyCode.D) && atqTime > 0)
         {
             // Si se pulsó durante más de 0.5 seg
-            /*
-            if (atqTime > 0.5)
+
+            if (atqTime == 0.5f)
                 // TODO Lanza ataque fuerte
-                null;
+                atqTime = 0;
             else
                 // TODO Lanza ataque normal
-                null;
-            atqTime = 0;
-            */
+                atqTime = 0;
+            
         }
 
         // Si está aturdido, deja de atacar:
@@ -101,6 +112,9 @@ public class Sumo : MonoBehaviour {
         {
             atqTime = 0;
         }
+
+        atqBar.value = atqTime / 0.5f;
+        defBar.value = defTime / (defense / 3);
   
 	}
 }
