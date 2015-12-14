@@ -22,13 +22,13 @@ public class SumoFighterController : MonoBehaviour
 
 	void Update()
 	{
-        // Restamos el valor al contador de la pantalla
-        counter.text = (5 - contF).ToString();
-
 		this.bellyTransform.localScale = new Vector3(this.bellyScale, this.bellyScale);
 
         if (loadedScene=="Restaurant")
         {
+            // Restamos el valor al contador de la pantalla
+            counter.text = (5 - contF).ToString();
+
             if (GameManager.instance.bellyScale>bellyScale)
             {
                 setChest();
