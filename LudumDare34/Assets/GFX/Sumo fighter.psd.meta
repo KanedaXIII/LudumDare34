@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c10a3f5dac100ba4eabb0a9d4e1925d3
-timeCreated: 1450029654
+timeCreated: 1450105190
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -27,6 +27,8 @@ TextureImporter:
     21300040: Sumo fighter mouth 2
     21300042: Sumo fighter mouth 3
     21300044: Sumo fighter mouth 4
+    21300046: Sumo fighter eyes bad
+    21300048: Sumo fighter star
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -234,8 +236,8 @@ TextureImporter:
         y: 19
         width: 8
         height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Sumo fighter loincloth
@@ -322,6 +324,28 @@ TextureImporter:
         y: 28
         width: 10
         height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter eyes bad
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 59
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter star
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 48
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
