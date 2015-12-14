@@ -31,6 +31,9 @@ public class GameManager : MonoBehaviour
     // TODO Controlador de menú principal
     // private MainMenuController mainMenuController;
 
+	public CanvasGroup buttonGroup;
+	public CanvasGroup creditsGroup;
+
     void Awake()
     {
         // Comprueba si ya hay una instancia del GameManager
@@ -79,6 +82,45 @@ public class GameManager : MonoBehaviour
         // Cambiar de escena
         SceneManager.LoadScene(sceneName);
     }
+
+	public void ShowCredits()
+	{
+		this.buttonGroup.interactable = false;
+		this.buttonGroup.blocksRaycasts = false;
+
+		this.creditsGroup.interactable = true;
+		this.creditsGroup.blocksRaycasts = true;
+		this.creditsGroup.alpha = 1.0f;
+	}
+
+	public void HideCredits()
+	{
+		this.buttonGroup.interactable = true;
+		this.buttonGroup.blocksRaycasts = true;
+
+		this.creditsGroup.interactable = false;
+		this.creditsGroup.blocksRaycasts = false;
+		this.creditsGroup.alpha = 0.0f;
+	}
+
+	private IEnumerator FadeInCredits()
+	{
+		while (this.creditsGroup.alpha <= 1.0f) {
+			this.creditsGroup.alpha += 0.04f;
+			yield return null;
+		}
+		this.creditsGroup.alpha = 1.0f;
+		yield break;
+	}
+
+	private IEnumerator FadeOutCredits()
+	{
+		while (this.creditsGroup.alpha >= 0.0f) {
+			this.creditsGroup.alpha -= 0.04f;
+			yield return null;
+		}
+		this.creditsGroup.alpha = 0.0f;
+	}
 
     public int BonusStrength
     {
