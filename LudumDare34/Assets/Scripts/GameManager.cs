@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private int wins = 0;
     private int attacks = 0;
     private int bigAttacks = 0;
-    private int blocks = 0;
+    private int defenses = 0;
     private int counters = 0;
 
     // Sonidos del juego
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
             GameManager.instance.Wins = 0;
             GameManager.instance.Attacks = 0;
             GameManager.instance.BigAttacks = 0;
-            GameManager.instance.Blocks = 0;
+            GameManager.instance.Defenses = 0;
             GameManager.instance.Counters = 0;
             GameManager.instance.bellyScale = 0.8f; 
         }
@@ -158,16 +158,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public int Blocks
+    public int Defenses
     {
         get
         {
-            return blocks;
+            return defenses;
         }
 
         set
         {
-            blocks = value;
+            defenses = value;
         }
     }
 

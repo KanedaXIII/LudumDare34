@@ -34,11 +34,17 @@ public class Sumo : MonoBehaviour {
         State = 1;        
 
         // Añadimos los bonus de la comida
-        if (this.name.Contains("sosio"))
+        if (this.name.Contains("Player"))
         {
             Strength += GameManager.instance.BonusStrength;
             Resistance += GameManager.instance.BonusResistance;
             Defense += GameManager.instance.BonusDefense;
+        }
+        else if (GameManager.instance.Wins > 0) // añadimos los bonus de dificultad
+        {
+            strength += Random.Range(0, GameManager.instance.Wins * 3);
+            resistance += Random.Range(0, GameManager.instance.Wins * 3);
+            defense += Random.Range(0, GameManager.instance.Wins * 3);
         }
 
         strText.text = Strength.ToString();
@@ -61,6 +67,7 @@ public class Sumo : MonoBehaviour {
             {
                 atqTime = 0;
                 State = 5;
+                GameManager.instance.Defenses++;
             }
 
             // Si se deja de pulsar "A" vuelve a reposo
@@ -82,20 +89,20 @@ public class Sumo : MonoBehaviour {
                 atqTime = 0;
             }
         }
-        else //Controles de la máquina
-        {
-            // Si está en reposo y el tiempo de defensa está al máximo se defiende
-            if (State == 1 && defTime == Defense / 2)
-            {
-                State = 5;
-            }
+        //else //Controles de la máquina
+        //{
+        //    // Si está en reposo y el tiempo de defensa está al máximo se defiende
+        //    if (State == 1 && defTime == Defense / 2)
+        //    {
+        //        State = 5;
+        //    }
 
-            // Si está en reposo y el tiempo de defensa está al mínimo ataca
-            if (State == 1 && defTime == 0)
-            {
-                State = 3;
-            }
-        }
+        //    // Si está en reposo y el tiempo de defensa está al mínimo ataca
+        //    if (State == 1 && defTime == 0)
+        //    {
+        //        State = 3;
+        //    }
+        //}
 
         // Si no está defendiendo y el tiempo de defensa no está al máximo se recupera
         if (State != 5 && defTime < Defense / 2)
@@ -144,6 +151,15 @@ public class Sumo : MonoBehaviour {
         atqBar.value = atqTime / 0.5f;
         defBar.value = defTime / (Defense / 2);
 	}
+
+    void OnCollisionEnter2d(Collision2D coll)
+    {
+        // Si el jugador sale del tatami
+        if (this.name.Contains("Player"))
+            FightManager.instance.combatLose();
+        else // Si el enemigo sale del tatami
+            FightManager.instance.combatWin();
+    }
 
     public int Strength
     {

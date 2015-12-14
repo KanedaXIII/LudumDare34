@@ -35,12 +35,11 @@ public class FightManager : MonoBehaviour {
         if (enemy.State == 5)
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.left * enemyPower);
-            //transform.position += new Vector3(-0.5f, 0, 0);
         }
         else // Si no, el ataque tiene éxito
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * playerPower);
-            //transform.position += new Vector3(0.5f, 0, 0);
+            GameManager.instance.Attacks++;
         }
     }
 
@@ -50,13 +49,23 @@ public class FightManager : MonoBehaviour {
         if (player.State == 5)
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * playerPower);
-            //transform.position += new Vector3(0.5f, 0, 0);
+            GameManager.instance.Counters++;
         }
         else // Si no, el ataque tiene éxito
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.left * enemyPower);
-            //transform.position += new Vector3(-0.5f, 0, 0);
         }
+    }
+
+    public void combatWin()
+    {
+        //TODO muestra VICTORIA
+        GameManager.instance.ChangeScene("Restaurant");
+    }
+
+    public void combatLose()
+    {
+
     }
 
 }
