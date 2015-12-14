@@ -9,6 +9,7 @@ public class SumoFighterController : MonoBehaviour
 	public Transform bellyTransform;
 	public Transform chestTransform;
     public GameObject PartAbsorb;
+    public GameObject MouthG;
     public int contF;
     public Text counter;
     string loadedScene;
@@ -36,6 +37,7 @@ public class SumoFighterController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
             {
                 PartAbsorb.GetComponent<Animator>().Play("Activate");
+                MouthG.GetComponent<Animator>().Play("openM");
             }
             if (contF==5)
             {
