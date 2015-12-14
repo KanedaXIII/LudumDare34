@@ -40,6 +40,7 @@ public class Food : MonoBehaviour {
     {
         if (coll.gameObject.tag=="foodDest")
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<SumoFighterController>().contF++;
             Destroy(this.gameObject);
         }
        
@@ -54,7 +55,7 @@ public class Food : MonoBehaviour {
 
         GameManager.instance.BonusResistance+=this.valueResistance;
 
-        GameManager.instance.bellyScale += 0.02f;
+        GameManager.instance.bellyScale += 0.005f;
         
     }
 }

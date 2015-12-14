@@ -7,7 +7,8 @@ public class SumoFighterController : MonoBehaviour
 	public float bellyScale = 1.0f;
 	public Transform bellyTransform;
 	public Transform chestTransform;
-
+    public GameObject PartAbsorb;
+    public int contF;
     string loadedScene;
 
     void Start()
@@ -26,6 +27,14 @@ public class SumoFighterController : MonoBehaviour
             if (GameManager.instance.bellyScale>bellyScale)
             {
                 setChest();
+            }
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+            {
+                PartAbsorb.GetComponent<Animator>().Play("Activate");
+            }
+            if (contF==5)
+            {
+                GameManager.instance.ChangeScene("Tatami");
             }
             
         }

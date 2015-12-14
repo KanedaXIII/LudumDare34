@@ -12,24 +12,14 @@ public class AbsorbController : MonoBehaviour
 
 	private List<Transform> particleList = new List<Transform>();
 
-	private bool active = false;
-
-	public void Activate()
-	{
-		this.active = true;
-	}
-
-	public void Deactivate()
-	{
-		this.active = false;
-	}
+	public bool active = false;
 
 	private void Update()
 	{
 		if (active) {
 			GameObject newParticle = new GameObject ("Absorb particle");
 			SpriteRenderer newRenderer = newParticle.AddComponent<SpriteRenderer> ();
-
+            newRenderer.sortingOrder=21;
 			newRenderer.sprite = this.particleSprite;
 			newRenderer.color = Color.Lerp (new Color(0.2f, 0.2f, 0.2f, 0.666f), new Color(0.8f, 0.8f, 0.8f, 0.666f), Random.value);
 
