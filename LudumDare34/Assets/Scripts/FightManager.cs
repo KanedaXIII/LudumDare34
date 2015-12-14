@@ -9,6 +9,10 @@ public class FightManager : MonoBehaviour {
 
     public static FightManager instance = null; // Allows other scripts to call functions from FightManager.
 
+    // Fuerzas calculadas
+    private float playerPower;
+    private float enemyPower;
+
     void Awake()
     {
         // Check if there is already an instance of FightManager
@@ -19,6 +23,10 @@ public class FightManager : MonoBehaviour {
         else if (instance != this)
             //Destroy this, this enforces our singleton pattern so there can only be one instance of FightManager.
             Destroy(gameObject);
+
+        //Calcula las fuerzas
+        playerPower = Mathf.Max(player.Strength - enemy.Resistance, 0) * 10 + 100;
+        enemyPower = Mathf.Max(enemy.Strength - player.Resistance, 0) * 10 + 100;
     }
 
     public void playerAttack()
@@ -26,12 +34,13 @@ public class FightManager : MonoBehaviour {
         // Si el enemigo se está defendiendo es un contraataque
         if (enemy.State == 5)
         {
-            transform.position += new Vector3(-0.5f, 0, 0);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.left * enemyPower);
+            //transform.position += new Vector3(-0.5f, 0, 0);
         }
         else // Si no, el ataque tiene éxito
         {
-            //GetComponent<Rigidbody2D>().AddForce(Vector2.right);
-            transform.position += new Vector3(0.5f, 0, 0);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.right * playerPower);
+            //transform.position += new Vector3(0.5f, 0, 0);
         }
     }
 
@@ -40,11 +49,13 @@ public class FightManager : MonoBehaviour {
         // Si el jugador se está defendiendo es un contraataque
         if (player.State == 5)
         {
-            transform.position += new Vector3(0.5f, 0, 0);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.right * playerPower);
+            //transform.position += new Vector3(0.5f, 0, 0);
         }
         else // Si no, el ataque tiene éxito
         {
-            transform.position += new Vector3(-0.5f, 0, 0);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.left * enemyPower);
+            //transform.position += new Vector3(-0.5f, 0, 0);
         }
     }
 
