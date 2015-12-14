@@ -28,6 +28,12 @@ public class Sumo : MonoBehaviour {
     private float defTime;
     private float atqTime;
 
+    //AI
+     public float timeToResponse;
+    public float timeR;
+
+    public int contAt;
+
     // Use this for initialization
     void Start () {
         // Animación de inicio
@@ -54,14 +60,18 @@ public class Sumo : MonoBehaviour {
         // Iniciamos los tiempos
         defTime = Defense / 2;
         atqTime = 0;
+        
     }
 
     // Update is called once per frame
     void Update () {
 
+
+
         // Controles del jugador
         if (this.name.Contains("Player"))
         {
+            
             // Si se pulsa "A" y está en estado de reposo o aturdido se defiende
             if (Input.GetKeyDown(KeyCode.A) && (State == 1 || State == 2))
             {
@@ -89,20 +99,20 @@ public class Sumo : MonoBehaviour {
                 atqTime = 0;
             }
         }
-        //else //Controles de la máquina
-        //{
-        //    // Si está en reposo y el tiempo de defensa está al máximo se defiende
-        //    if (State == 1 && defTime == Defense / 2)
-        //    {
-        //        State = 5;
-        //    }
+        else //Controles de la máquina
+        {
+            // Si está en reposo y el tiempo de defensa está al máximo se defiende
+            if (State == 1 && defTime == Defense / 2)
+            {
+                State = 5;
+            }
 
-        //    // Si está en reposo y el tiempo de defensa está al mínimo ataca
-        //    if (State == 1 && defTime == 0)
-        //    {
-        //        State = 3;
-        //    }
-        //}
+            // Si está en reposo y el tiempo de defensa está al mínimo ataca
+            if (State == 1 && defTime == 0)
+            {
+                State = 3;
+            }
+        }
 
         // Si no está defendiendo y el tiempo de defensa no está al máximo se recupera
         if (State != 5 && defTime < Defense / 2)
@@ -116,7 +126,6 @@ public class Sumo : MonoBehaviour {
         if (State == 5)
         {
             defTime -= Time.deltaTime;
-
             // Si se acaba el tiempo de defensa pasa a reposo
             if(defTime <= 0)
             {

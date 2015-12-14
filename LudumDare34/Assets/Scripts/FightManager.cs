@@ -45,6 +45,8 @@ public class FightManager : MonoBehaviour {
 
     public void enemyAttack()
     {
+
+
         // Si el jugador se está defendiendo es un contraataque
         if (player.State == 5)
         {
