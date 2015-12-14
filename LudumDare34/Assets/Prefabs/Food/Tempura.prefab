@@ -76,8 +76,9 @@ MonoBehaviour:
   nameFood: Tempura
   valueStrength: 0
   valueResistance: 0
-  valueDefense: 0
+  valueDefense: 1
   isTake: 0
+  eatSound: {fileID: 8300000, guid: dd070abb51ad49545a7f158a28829704, type: 3}
 --- !u!212 &21219240
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -119,6 +120,14 @@ Prefab:
       propertyPath: nameFood
       value: Tempura
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: valueDefense
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: eatSound
+      value: 
+      objectReference: {fileID: 8300000, guid: dd070abb51ad49545a7f158a28829704, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 133310}

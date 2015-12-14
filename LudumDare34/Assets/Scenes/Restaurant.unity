@@ -435,6 +435,10 @@ Prefab:
       propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11456556, guid: 12686449f9ba6a84aba926eed00db2d4, type: 2}
+      propertyPath: counter
+      value: 
+      objectReference: {fileID: 733659079}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12686449f9ba6a84aba926eed00db2d4, type: 2}
   m_IsPrefabParent: 0
@@ -863,9 +867,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Food:
+  - {fileID: 146664, guid: c7b7493b1d62a34469ab0aae2454323b, type: 2}
   - {fileID: 161716, guid: 71e1aec072e0cd14ab9d22d6f9bac80f, type: 2}
   - {fileID: 133310, guid: 40bd0b47b1018df4b8186ac714f27f9d, type: 2}
-  - {fileID: 146664, guid: c7b7493b1d62a34469ab0aae2454323b, type: 2}
   timeT: 1
 --- !u!1 &1840425296
 GameObject:

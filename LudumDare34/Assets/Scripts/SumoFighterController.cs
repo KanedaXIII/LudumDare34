@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SumoFighterController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class SumoFighterController : MonoBehaviour
 	public Transform chestTransform;
     public GameObject PartAbsorb;
     public int contF;
+    public Text counter;
     string loadedScene;
 
     void Start()
@@ -20,6 +22,9 @@ public class SumoFighterController : MonoBehaviour
 
 	void Update()
 	{
+        // Restamos el valor al contador de la pantalla
+        counter.text = (5 - contF).ToString();
+
 		this.bellyTransform.localScale = new Vector3(this.bellyScale, this.bellyScale);
 
         if (loadedScene=="Restaurant")

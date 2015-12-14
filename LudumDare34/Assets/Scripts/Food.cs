@@ -8,6 +8,7 @@ public class Food : MonoBehaviour {
     public int valueResistance;
     public int valueDefense;
     public bool isTake=false;
+    public AudioClip eatSound;
 
 	// Use this for initialization
 	void Start () {
@@ -16,8 +17,9 @@ public class Food : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S)) && isTake)
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) && isTake)
         {
+            SoundManager.instance.PlaySingle(eatSound);
             setSumStats();
             GameObject.FindGameObjectWithTag("Player").GetComponent<SumoFighterController>().contF++;
             Destroy(this.gameObject);

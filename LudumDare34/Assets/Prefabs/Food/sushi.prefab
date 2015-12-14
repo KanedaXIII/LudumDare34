@@ -75,9 +75,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameFood: sushi
   valueStrength: 0
-  valueResistance: 0
+  valueResistance: 1
   valueDefense: 0
   isTake: 0
+  eatSound: {fileID: 8300000, guid: dd070abb51ad49545a7f158a28829704, type: 3}
 --- !u!212 &21231360
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -123,6 +124,14 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: valueResistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: eatSound
+      value: 
+      objectReference: {fileID: 8300000, guid: dd070abb51ad49545a7f158a28829704, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 161716}
