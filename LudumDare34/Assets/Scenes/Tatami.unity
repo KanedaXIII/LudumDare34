@@ -414,6 +414,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1372788196}
   enemy: {fileID: 1951463085}
+  punchsound: {fileID: 8300000, guid: f410d4b74312f704498f7fb4a4e212b1, type: 3}
+  damageSound1: {fileID: 8300000, guid: 1a8974ebf0b68904489b6b7eb72cb445, type: 3}
+  damageSound2: {fileID: 8300000, guid: f4bbb5561c6b9564c9df62a2ced6f8f9, type: 3}
+  countersound: {fileID: 8300000, guid: 8125928af0acc4a4683dc6a9ac99e20d, type: 3}
 --- !u!4 &419684273
 Transform:
   m_ObjectHideFlags: 0

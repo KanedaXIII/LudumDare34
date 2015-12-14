@@ -7,6 +7,13 @@ public class FightManager : MonoBehaviour {
     public Sumo player;
     public Sumo enemy;
 
+    // Sonidos del combate;
+    public AudioClip punchsound;
+    public AudioClip damageSound1;
+    public AudioClip damageSound2;
+    public AudioClip countersound;
+
+
     public static FightManager instance = null; // Allows other scripts to call functions from FightManager.
 
     // Fuerzas calculadas
@@ -34,12 +41,16 @@ public class FightManager : MonoBehaviour {
         // Si el enemigo se está defendiendo es un contraataque
         if (enemy.State == 5)
         {
+            SoundManager.instance.PlaySingle(countersound);
             GetComponent<Rigidbody2D>().AddForce(Vector2.left * enemyPower);
+            SoundManager.instance.PlaySingle2(damageSound2);
         }
         else // Si no, el ataque tiene éxito
         {
+            SoundManager.instance.PlaySingle(punchsound);
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * playerPower);
             GameManager.instance.Attacks++;
+            SoundManager.instance.PlaySingle2(damageSound1);
         }
     }
 
@@ -50,12 +61,16 @@ public class FightManager : MonoBehaviour {
         // Si el jugador se está defendiendo es un contraataque
         if (player.State == 5)
         {
+            SoundManager.instance.PlaySingle(countersound);
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * playerPower);
             GameManager.instance.Counters++;
+            SoundManager.instance.PlaySingle2(damageSound2);
         }
         else // Si no, el ataque tiene éxito
         {
+            SoundManager.instance.PlaySingle(punchsound);
             GetComponent<Rigidbody2D>().AddForce(Vector2.left * enemyPower);
+            SoundManager.instance.PlaySingle2(damageSound1);
         }
     }
 
