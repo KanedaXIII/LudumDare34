@@ -7,6 +7,8 @@ TagManager:
   - cantTake
   - canTake
   - foodDest
+  - Food
+  - Enemy
   layers:
   - Default
   - TransparentFX

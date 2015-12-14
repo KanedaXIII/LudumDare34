@@ -152,13 +152,23 @@ public class Sumo : MonoBehaviour {
         defBar.value = defTime / (Defense / 2);
 	}
 
-    void OnCollisionEnter2d(Collision2D coll)
+    void OnTriggerEnter2D(Collider2D coll)
     {
-        // Si el jugador sale del tatami
-        if (this.name.Contains("Player"))
-            FightManager.instance.combatLose();
-        else // Si el enemigo sale del tatami
-            FightManager.instance.combatWin();
+        if (coll.gameObject.name== "Borders")
+        {
+            // Si el jugador sale del tatami
+            if (this.tag == "player")
+            {
+                Debug.Log("Estoy entrando papa");
+                FightManager.instance.combatLose();
+            }
+            else
+            {
+                // Si el enemigo sale del tatami
+                FightManager.instance.combatWin();
+            }
+        }
+       
     }
 
     public int Strength

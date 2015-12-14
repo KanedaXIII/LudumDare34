@@ -19,6 +19,7 @@ public class Food : MonoBehaviour {
         if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S)) && isTake)
         {
             setSumStats();
+            GameObject.FindGameObjectWithTag("Player").GetComponent<SumoFighterController>().contF++;
             Destroy(this.gameObject);
         }
 	}
@@ -40,7 +41,6 @@ public class Food : MonoBehaviour {
     {
         if (coll.gameObject.tag=="foodDest")
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<SumoFighterController>().contF++;
             Destroy(this.gameObject);
         }
        
