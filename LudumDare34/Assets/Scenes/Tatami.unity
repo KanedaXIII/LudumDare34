@@ -414,7 +414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1372788196}
   enemy: {fileID: 1951463085}
-  punchsound: {fileID: 8300000, guid: f410d4b74312f704498f7fb4a4e212b1, type: 3}
+  punchSound: {fileID: 8300000, guid: f410d4b74312f704498f7fb4a4e212b1, type: 3}
   damageSound1: {fileID: 8300000, guid: 1a8974ebf0b68904489b6b7eb72cb445, type: 3}
   damageSound2: {fileID: 8300000, guid: f4bbb5561c6b9564c9df62a2ced6f8f9, type: 3}
   countersound: {fileID: 8300000, guid: 8125928af0acc4a4683dc6a9ac99e20d, type: 3}
@@ -2106,6 +2106,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1552763048}
+--- !u!1001 &1556057032
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 445046, guid: 779c355cbd266934892a1fe7c44fe2ad, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 445046, guid: 779c355cbd266934892a1fe7c44fe2ad, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 445046, guid: 779c355cbd266934892a1fe7c44fe2ad, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445046, guid: 779c355cbd266934892a1fe7c44fe2ad, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445046, guid: 779c355cbd266934892a1fe7c44fe2ad, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445046, guid: 779c355cbd266934892a1fe7c44fe2ad, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445046, guid: 779c355cbd266934892a1fe7c44fe2ad, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445046, guid: 779c355cbd266934892a1fe7c44fe2ad, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 779c355cbd266934892a1fe7c44fe2ad, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1616545788
 Prefab:
   m_ObjectHideFlags: 0
@@ -2921,7 +2963,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.09196585, g: 0.11625038, b: 0.1544118, a: 0.019607844}
+  m_BackGroundColor: {r: 0.39705884, g: 0, b: 0, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

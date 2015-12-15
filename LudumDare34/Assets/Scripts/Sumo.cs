@@ -46,11 +46,11 @@ public class Sumo : MonoBehaviour {
             Resistance += GameManager.instance.BonusResistance;
             Defense += GameManager.instance.BonusDefense;
         }
-        else if (GameManager.instance.Wins > 0) // añadimos los bonus de dificultad
+        else // añadimos los bonus de dificultad
         {
-            strength += Random.Range(0, GameManager.instance.Wins * 3);
-            resistance += Random.Range(0, GameManager.instance.Wins * 3);
-            defense += Random.Range(0, GameManager.instance.Wins * 3);
+            strength += Random.Range(0, GameManager.instance.Wins * 5);
+            resistance += Random.Range(0, GameManager.instance.Wins * 5);
+            defense += Random.Range(0, GameManager.instance.Wins * 5);
         }
 
         strText.text = Strength.ToString();
@@ -112,12 +112,21 @@ public class Sumo : MonoBehaviour {
             {
                 State = 3;
             }
+
+            // Si está defendiendo puede atacar de repente
+            if(State == 5 || State == 1)
+            {
+                if (Random.Range(0, 500) < strength)
+                {
+                    state = 3;
+                }
+            }
         }
 
         // Si no está defendiendo y el tiempo de defensa no está al máximo se recupera
         if (State != 5 && defTime < Defense / 2)
         {
-            defTime += Time.deltaTime / 3;
+            defTime += Time.deltaTime / 2;
             if (defTime > Defense / 2)
                 defTime = Defense / 2;
         }
@@ -166,9 +175,8 @@ public class Sumo : MonoBehaviour {
         if (coll.gameObject.name== "Borders")
         {
             // Si el jugador sale del tatami
-            if (this.tag == "player")
+            if (this.tag == "Player")
             {
-                Debug.Log("Estoy entrando papa");
                 FightManager.instance.combatLose();
             }
             else

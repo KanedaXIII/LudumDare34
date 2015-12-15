@@ -143,6 +143,11 @@ public class GameManager : MonoBehaviour
 		this.creditsGroup.alpha = 0.0f;
 	}
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public int BonusStrength
     {
         get

@@ -8,7 +8,7 @@ public class FightManager : MonoBehaviour {
     public Sumo enemy;
 
     // Sonidos del combate;
-    public AudioClip punchsound;
+    public AudioClip punchSound;
     public AudioClip damageSound1;
     public AudioClip damageSound2;
     public AudioClip countersound;
@@ -47,7 +47,7 @@ public class FightManager : MonoBehaviour {
         }
         else // Si no, el ataque tiene éxito
         {
-            SoundManager.instance.PlaySingle(punchsound);
+            SoundManager.instance.PlaySingle(punchSound);
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * playerPower);
             GameManager.instance.Attacks++;
             SoundManager.instance.PlaySingle2(damageSound1);
@@ -68,7 +68,7 @@ public class FightManager : MonoBehaviour {
         }
         else // Si no, el ataque tiene éxito
         {
-            SoundManager.instance.PlaySingle(punchsound);
+            SoundManager.instance.PlaySingle(punchSound);
             GetComponent<Rigidbody2D>().AddForce(Vector2.left * enemyPower);
             SoundManager.instance.PlaySingle2(damageSound1);
         }
@@ -77,12 +77,13 @@ public class FightManager : MonoBehaviour {
     public void combatWin()
     {
         //TODO muestra VICTORIA
+        GameManager.instance.Wins++;
         GameManager.instance.ChangeScene("Restaurant");
     }
 
     public void combatLose()
     {
-
+        GameManager.instance.ChangeScene("Main menu");
     }
 
 }
