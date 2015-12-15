@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
 
 	public CanvasGroup buttonGroup;
 	public CanvasGroup creditsGroup;
+    public CanvasGroup tutorialGroup;
 
     void Awake()
     {
@@ -83,7 +84,17 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-	public void ShowCredits()
+    public void ShowTutorial()
+    {
+        this.buttonGroup.interactable = false;
+        this.buttonGroup.blocksRaycasts = false;
+
+        this.tutorialGroup.interactable = true;
+        this.tutorialGroup.blocksRaycasts = true;
+        this.tutorialGroup.alpha = 1.0f;
+    }
+
+    public void ShowCredits()
 	{
 		this.buttonGroup.interactable = false;
 		this.buttonGroup.blocksRaycasts = false;
@@ -93,7 +104,17 @@ public class GameManager : MonoBehaviour
 		this.creditsGroup.alpha = 1.0f;
 	}
 
-	public void HideCredits()
+    public void HideTutorial()
+    {
+        this.buttonGroup.interactable = true;
+        this.buttonGroup.blocksRaycasts = true;
+
+        this.tutorialGroup.interactable = false;
+        this.tutorialGroup.blocksRaycasts = false;
+        this.tutorialGroup.alpha = 0.0f;
+    }
+
+    public void HideCredits()
 	{
 		this.buttonGroup.interactable = true;
 		this.buttonGroup.blocksRaycasts = true;
