@@ -1,0 +1,357 @@
+fileFormatVersion: 2
+guid: c10a3f5dac100ba4eabb0a9d4e1925d3
+timeCreated: 1450105190
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Sumo fighter head
+    21300002: Sumo fighter arm 4
+    21300004: Sumo fighter hand 90
+    21300006: Sumo fighter hair 1
+    21300008: Sumo fighter arm 3
+    21300010: Sumo fighter hand 45
+    21300012: Sumo fighter hair 2
+    21300014: Sumo fighter chest
+    21300016: Sumo fighter arm 2
+    21300018: Sumo fighter hand 0
+    21300020: Sumo fighter eyes 1
+    21300022: Sumo fighter belly
+    21300024: Sumo fighter arm 1
+    21300026: Sumo fighter leg
+    21300028: Sumo fighter mouth open
+    21300030: Sumo fighter loincloth
+    21300032: Sumo fighter eyes 2
+    21300034: Sumo fighter eyes 3
+    21300036: Sumo fighter eyes 4
+    21300038: Sumo fighter mouth 1
+    21300040: Sumo fighter mouth 2
+    21300042: Sumo fighter mouth 3
+    21300044: Sumo fighter mouth 4
+    21300046: Sumo fighter eyes bad
+    21300048: Sumo fighter star
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 128
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Sumo fighter head
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 46
+        width: 20
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter arm 4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 52
+        width: 17
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter hand 90
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 54
+        width: 8
+        height: 8
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter hair 1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 49
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter arm 3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 43
+        width: 17
+        height: 8
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter hand 45
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 45
+        width: 9
+        height: 8
+      alignment: 9
+      pivot: {x: 0.25, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter hair 2
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 34
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter chest
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 36
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter arm 2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 35
+        width: 17
+        height: 6
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter hand 0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 35
+        width: 7
+        height: 8
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter eyes 1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 59
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter belly
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 21
+        width: 20
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter arm 1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 29
+        width: 17
+        height: 4
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter leg
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 12
+        width: 12
+        height: 11
+      alignment: 9
+      pivot: {x: 0.2, y: 0.8}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter mouth open
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 19
+        width: 8
+        height: 7
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter loincloth
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 12
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter eyes 2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 57
+        width: 10
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter eyes 3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 53
+        width: 10
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter eyes 4
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 47
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter mouth 1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 43
+        width: 8
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter mouth 2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 39
+        width: 8
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter mouth 3
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 34
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter mouth 4
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 28
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter eyes bad
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 59
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo fighter star
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

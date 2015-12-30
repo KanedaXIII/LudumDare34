@@ -1,0 +1,405 @@
+fileFormatVersion: 2
+guid: 50134ec2f0f3f60448925334af810a13
+timeCreated: 1450105041
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Sumo side head
+    21300002: Sumo side shoulder
+    21300004: Sumo side hair 1
+    21300006: Sumo side chest
+    21300008: Sumo side biceps 4
+    21300010: Sumo side forearm 4
+    21300012: Sumo side hand 90
+    21300014: Sumo side biceps 3
+    21300016: Sumo side forearm 3
+    21300018: Sumo side hand 45
+    21300020: Sumo side hair 2
+    21300022: Sumo side belly
+    21300024: Sumo side biceps 2
+    21300026: Sumo side forearm 2
+    21300028: Sumo side hand 0
+    21300030: Sumo side eye 1
+    21300032: Sumo side biceps 1
+    21300034: Sumo side forearm 1
+    21300036: Sumo side loincloth
+    21300038: Sumo side leg
+    21300040: Sumo side eye 2
+    21300042: Sumo side eye 3
+    21300044: Sumo side eye 4
+    21300046: Sumo side mouth 4
+    21300048: Sumo side mouth 1
+    21300050: Sumo side mouth 2
+    21300052: Sumo side mouth 3
+    21300054: Sumo side eye bad
+    21300056: Sumo side star
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 128
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Sumo side head
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 46
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side shoulder
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 56
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side hair 1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 48
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side chest
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 36
+        width: 20
+        height: 8
+      alignment: 9
+      pivot: {x: 0.166, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side biceps 4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 42
+        width: 12
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side forearm 4
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 43
+        width: 10
+        height: 8
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side hand 90
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 43
+        width: 8
+        height: 8
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side biceps 3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 33
+        width: 12
+        height: 8
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side forearm 3
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 33
+        width: 10
+        height: 8
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side hand 45
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 34
+        width: 8
+        height: 8
+      alignment: 9
+      pivot: {x: 0.2, y: 0.8}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side hair 2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 27
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side belly
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 21
+        width: 20
+        height: 13
+      alignment: 9
+      pivot: {x: 0.1666, y: 0.1666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side biceps 2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 25
+        width: 12
+        height: 6
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side forearm 2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 25
+        width: 10
+        height: 6
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side hand 0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 24
+        width: 7
+        height: 8
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side eye 1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 58
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side biceps 1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 19
+        width: 12
+        height: 4
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side forearm 1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 19
+        width: 10
+        height: 4
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side loincloth
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 12
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side leg
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 6
+        width: 12
+        height: 11
+      alignment: 9
+      pivot: {x: 0.333, y: 0.8}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side eye 2
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 53
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side eye 3
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 47
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side eye 4
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 42
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side mouth 4
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 23
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side mouth 1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 37
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side mouth 2
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 33
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side mouth 3
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 29
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side eye bad
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 57
+        width: 5
+        height: 4
+      alignment: 9
+      pivot: {x: 0.666, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Sumo side star
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 46
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
